@@ -1,0 +1,2 @@
+[127.0.0.1]:51490 200 - GET /log/ipandport
+18:03:16 GET /log/format 127.0.0.1 200  -
