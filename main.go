@@ -1,6 +1,7 @@
 package main
 
 import (
+	"gofiber_withlog/logs"
 	"io"
 	"log"
 	"os"
@@ -54,5 +55,8 @@ func main() {
 		return c.SendString("Hello, ip and port!")
 	})
 
-	app.Listen(":8000")
+	ports := ":8000"
+	logs.Info("Banking service started at port " + ports)
+	app.Listen(ports)
+
 }
