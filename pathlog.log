@@ -1,6 +1,0 @@
-[127.0.0.1]:50473 200 - GET /log/ipandport
-[127.0.0.1]:50473 200 - GET /log/ipandport
-16:53:44 GET /log/format 127.0.0.1 200  -
-18:00:47 GET /log/format 127.0.0.1 200  -
-18:00:48 GET /log/format 127.0.0.1 200  -
-[127.0.0.1]:51457 200 - GET /log/ipandport

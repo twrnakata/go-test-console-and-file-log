@@ -15,9 +15,9 @@ func main() {
 
 	// ดึงเวลามาใช้เป็นชื่อไฟล์ log
 	now := time.Now().Format("2006-01-02")
-	logFileName := "pathlog-" + now + ".log"
+	fileLogName := "logs/middleware-log" + now + ".log"
 
-	logFile, err := os.OpenFile(logFileName, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	logFile, err := os.OpenFile(fileLogName, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0644)
 	if err != nil {
 		log.Fatalf("error opening file: %v", err)
 	}
@@ -34,7 +34,7 @@ func main() {
 		return c.Next()
 	})
 
-	// Add the logger middleware
+	// Add the logger(gofiber) middleware
 	v1.Use("/format", logger.New(logger.Config{
 		Format: "${time} ${method} ${path} ${ip} ${status} ${responseTime} ${error}\n",
 		Output: output,
